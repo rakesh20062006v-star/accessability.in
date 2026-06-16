@@ -1,0 +1,90 @@
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 92%;
+  height: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 35px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.logo-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #6d5dfc;
+  border-radius: 12px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #8b5cf6;
+}
+
+.profile-btn {
+  text-decoration: none;
+  border: none;
+  outline: none;
+
+  padding: 12px 28px;
+
+  background: #6d5dfc;
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  border-radius: 12px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.profile-btn:hover {
+  transform: translateY(-2px);
+  background: #5b4cf0;
+}

@@ -1,0 +1,257 @@
+/* =========================
+   JOBS PAGE
+========================= */
+
+.jobContainer {
+  min-height: 100vh;
+  padding: 140px 30px 40px;
+  background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #1e1b4b 50%,
+    #312e81 100%
+  );
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.heading {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   SEARCH & FILTER
+========================= */
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.input,
+.select {
+  width: 260px;
+  padding: 12px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+
+  color: white;
+  font-size: 15px;
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.input::placeholder {
+  color: #cbd5e1;
+}
+
+.input:focus,
+.select:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.4);
+}
+
+/* Fix select dropdown text */
+.select option {
+  background: #1e1b4b;
+  color: white;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.voiceBtn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+
+  background: #6d5dfc;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.voiceBtn:hover {
+  background: #5b4cf0;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   JOB GRID
+========================= */
+
+.jobGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 25px;
+}
+
+/* =========================
+   JOB CARD
+========================= */
+
+.jobCard {
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 20px;
+  padding: 24px;
+
+  color: white;
+
+  transition: all 0.3s ease;
+}
+
+.jobCard:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 15px 35px rgba(109, 93, 252, 0.3);
+}
+
+.jobTitle {
+  color: #c4b5fd;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.info {
+  color: #e5e7eb;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* =========================
+   TAG
+========================= */
+
+.tag {
+  display: inline-block;
+
+  margin-top: 12px;
+  padding: 7px 14px;
+
+  background: rgba(109, 93, 252, 0.2);
+  border: 1px solid rgba(109, 93, 252, 0.4);
+
+  color: #ddd6fe;
+
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   CARD BUTTONS
+========================= */
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.listenBtn,
+.applyBtn {
+  flex: 1;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 11px;
+
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.listenBtn {
+  background: #06b6d4;
+}
+
+.listenBtn:hover {
+  background: #0891b2;
+  transform: translateY(-2px);
+}
+
+.applyBtn {
+  background: #22c55e;
+}
+
+.applyBtn:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   NO JOBS FOUND
+========================= */
+
+.noJobs {
+  text-align: center;
+  color: #e2e8f0;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .jobContainer {
+    padding: 130px 15px 30px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .input,
+  .select,
+  .voiceBtn {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .jobGrid {
+    grid-template-columns: 1fr;
+  }
+}

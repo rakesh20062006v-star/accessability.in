@@ -1,0 +1,91 @@
+.container {
+  min-height: 100vh;
+  padding: 40px;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e1b4b,
+    #312e81
+  );
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+}
+
+.logoutBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.logoutBtn:hover {
+  background: #dc2626;
+}
+
+.subtitle {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  color: #cbd5e1;
+  font-size: 1.1rem;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+
+  padding: 25px;
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(109, 93, 252, 0.3);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #c4b5fd;
+}
+
+.card p {
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+}

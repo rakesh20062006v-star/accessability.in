@@ -1,0 +1,138 @@
+/* Application.module.css */
+
+.container {
+  min-height: 100vh;
+  background: #0f172a;
+  padding: 40px;
+}
+
+.heading {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  position: relative;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 18px;
+  padding: 25px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #2563eb;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+}
+
+.card h3 {
+  margin: 16px 0;
+  color: #e2e8f0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.card span {
+  color: #60a5fa;
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.empty {
+  max-width: 600px;
+  margin: 80px auto;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 18px;
+  padding: 50px;
+  text-align: center;
+  color: #cbd5e1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.empty h2 {
+  font-size: 1.8rem;
+}
+
+.homeBtn {
+  display: block;
+  margin: 40px auto 0;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.homeBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.45);
+}
+
+.homeBtn:active {
+  transform: translateY(0);
+}
+
+.loading {
+  min-height: 100vh;
+  background: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .homeBtn {
+    width: 100%;
+    max-width: 250px;
+  }
+}

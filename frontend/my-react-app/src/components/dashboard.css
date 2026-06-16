@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.dashboard {
+  min-height: 100vh;
+}
+
+/* HERO SECTION */
+
+.hero {
+  min-height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding-top: 120px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  color: white;
+
+  font-size: 4rem;
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  margin-bottom: 20px;
+
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+  color: white;
+
+  font-size: 1.25rem;
+  line-height: 1.8;
+
+  max-width: 750px;
+  margin: auto;
+}
+
+.hero-btn {
+  margin-top: 30px;
+
+  padding: 16px 40px;
+
+  border: none;
+  border-radius: 15px;
+
+  background: #635bff;
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 25px rgba(99, 91, 255, 0.4);
+}
+
+/* CARDS */
+
+.cards-section {
+  position: relative;
+
+  margin-top: -70px;
+
+  z-index: 10;
+}
+
+.cards-container {
+  width: 95%;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.card {
+  min-height: 180px;
+
+  padding: 30px;
+
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  color: white;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+
+  font-size: 2rem;
+}
+
+.card p {
+  font-size: 1rem;
+
+  line-height: 1.7;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-section {
+    margin-top: -40px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}

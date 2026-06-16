@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed,
+        #ec4899
+    );
+}
+
+.register-wrapper {
+    min-height: 100vh;
+    display: flex;
+}
+
+/* LEFT PANEL */
+
+.banner-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    color: white;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.accessibility-icon {
+    font-size: 180px;
+    color: white;
+    margin-bottom: 25px;
+    line-height: 1;
+    animation: float 3s ease-in-out infinite;
+    text-shadow:
+        0 0 20px rgba(255,255,255,0.4),
+        0 0 40px rgba(255,255,255,0.2);
+}
+
+.banner-content h2 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.banner-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* RIGHT PANEL */
+
+.form-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.register-card {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    animation: fadeIn 0.7s ease;
+}
+
+.register-card h1 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+}
+
+.register-subtitle {
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group h3 {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.text-input {
+    width: 100%;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.9);
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.text-input:focus {
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+/* SECTION TITLES */
+
+.section-title {
+    color: white;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* RADIOS & CHECKBOXES */
+
+.radio-option,
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.radio-option:hover,
+.checkbox-option:hover {
+    transform: translateX(5px);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* DISABILITY GRID */
+
+.disability-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: white;
+    color: #4f46e5;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+}
+
+/* FOOTER */
+
+.signin-footer {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.inline-link-btn {
+    background: none;
+    border: none;
+    color: #fcd34d;
+    margin-left: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.inline-link-btn:hover {
+    text-decoration: underline;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+    .register-wrapper {
+        flex-direction: column;
+    }
+
+    .banner-side {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .banner-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .register-card {
+        padding: 25px;
+    }
+
+    .disability-grid {
+        grid-template-columns: 1fr;
+    }
+}
