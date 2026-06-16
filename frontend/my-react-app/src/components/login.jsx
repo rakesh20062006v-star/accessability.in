@@ -49,7 +49,7 @@ function Login() {
                  navigate('/dashboard');
             }
         } catch (error) {
-            toast.info("Invalid username or password");
+            toast.error(error.response?.data?.message || "Invalid username or password");
             console.error(error);
         }
     };
@@ -115,7 +115,7 @@ function Login() {
                             />
                             Show Password
                         </label>
-                        <button className="forgot-btn" onClick={()=> navigate("/auth/fpass")}>
+                        <button type="button" className="forgot-btn" onClick={() => navigate("/auth/fpass")}>
                             Forgot Password?
                         </button>
                         <button
