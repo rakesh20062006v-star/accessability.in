@@ -13,7 +13,7 @@ function SupportServices() {
   const getdetails = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/jobsadd/getqueries"
+        `${import.meta.env.VITE_API_URL}/api/jobsadd/getqueries`
       );
        console.log(response.data);
       // Show only unread queries
@@ -32,7 +32,7 @@ function SupportServices() {
   const markAsRead = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/jobs/read/${id}`
+        `${import.meta.env.VITE_API_URL}/api/jobs/read/${id}`
       );
 
       // Remove from UI immediately

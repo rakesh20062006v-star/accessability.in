@@ -20,7 +20,7 @@ export default function Jobs() {
     const user = JSON.parse(userData);
 
     const { data } = await axios.get(
-      `http://localhost:5000/api/application/${user.username}`
+      `${import.meta.env.VITE_API_URL}/api/application/${user.username}`
     );
 
     setAppliedJobs(data.jobIds || []);
@@ -46,7 +46,7 @@ const applyJob = async (jobId) => {
     const user = JSON.parse(userData);
 
     const response = await axios.post(
-      "http://localhost:5000/api/application/apply",
+      `${import.meta.env.VITE_API_URL}/api/application/apply`,
       {
         username: user.username,
         jobId: jobId,
@@ -77,7 +77,7 @@ useEffect(() => {
   const fetchJobs = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/jobs/jobapply"
+        `${import.meta.env.VITE_API_URL}/api/jobs/jobapply`
       );
 
       console.log("Jobs:", data);

@@ -15,7 +15,7 @@ const navigate = useNavigate();
   const getApplications = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/application/details"
+        `${import.meta.env.VITE_API_URL}/api/application/details`
       );
 
       setApplications(response.data.newdata || []);

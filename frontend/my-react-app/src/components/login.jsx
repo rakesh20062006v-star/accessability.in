@@ -15,7 +15,7 @@ function Login() {
 
         try {
             const response = await axios.post(
-                "http://localhost:5000/api/auth/login",
+                `${import.meta.env.VITE_API_URL}/api/auth/login`,
                 {
                     username,
                     password,
@@ -136,6 +136,16 @@ function Login() {
                             }
                         >
                             Register
+                        </span>
+                    </p>
+                    <p className="register-text" style={{ marginTop: '10px', fontSize: '13px' }}>
+                        Are you an admin?
+                        <span
+                            className="register-link"
+                            style={{ color: '#fbbf24' }}
+                            onClick={() => navigate("/auth/admin-register")}
+                        >
+                            Register as Admin
                         </span>
                     </p>
                 </div>

@@ -30,7 +30,7 @@ export default function AddJob() {
 
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/jobsadd/add-job",
+      `${import.meta.env.VITE_API_URL}/api/jobsadd/add-job`,
       job
     );
 

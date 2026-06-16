@@ -23,7 +23,7 @@ export default function Contact() {
 
     try {
       // Replace with your API endpoint
-      await axios.post("http://localhost:5000/api/jobsadd/queries", formData);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/jobsadd/queries`, formData);
 
       toast.success("Message sent successfully!");
 

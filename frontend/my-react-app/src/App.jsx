@@ -14,6 +14,7 @@ import Application from './components/viewApp';
 import ManageApplication from './components/manage-application';
 import Contact from './components/contact';
 import SupportServices from './components/support-services';
+import AdminRegister from './components/AdminRegister';
 function App(){
 return <>
   <BrowserRouter>
@@ -30,6 +31,7 @@ return <>
            <Route path='/manage-jobs' element={<ManageApplication />} />
            <Route path='/contact' element={<Contact />} />
            <Route path='/support-services' element={<SupportServices/>}/>
+           <Route path='/auth/admin-register' element={<AdminRegister />} />
          <Route
   path="/restaurants"
   element={<Restaurant />}

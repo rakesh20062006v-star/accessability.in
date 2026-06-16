@@ -13,7 +13,7 @@ function ManageApplication() {
   const getdetails = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/application/jobdetails"
+        `${import.meta.env.VITE_API_URL}/api/application/jobdetails`
       );
 
       setjobapplications(response.data.data || []);
@@ -29,7 +29,7 @@ function ManageApplication() {
 
   try {
     const response = await axios.delete(
-      `http://localhost:5000/api/application/deletejob/${id}`
+      `${import.meta.env.VITE_API_URL}/api/application/deletejob/${id}`
     );
 
     console.log(response.data);
